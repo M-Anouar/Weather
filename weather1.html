@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weathre</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="search-container">
+      <input
+        type="text"
+        id="cityInput"
+        placeholder="اكتب اسم المدينة مثل Al hoceima"/>
+      <button id="searchBtn">بحث</button>
+    </div>
+
+    <div class="weather-card">
+      <div id="statusMessage" class="loading">جاري تحميل البيانات...</div>
+
+      <div id="weatherContent" style="display: none">
+        <div class="header">
+          <div class="location">
+            <span></span> <span id="cityName">--</span> <span></span>
+          </div>
+          <div class="more-options"></div>
+        </div>
+
+        <div class="main-info">
+          <div class="current-temp-container">
+            <div class="main-icon" id="mainIcon">⛅</div>
+            <div>
+              <span class="temp-number" id="currentTemp">--</span
+              ><span class="temp-unit">°C</span>
+            </div>
+          </div>
+          <div class="humidity-box">
+            💧 <span id="humidity">% الرطوبة</span> <span></span>
+          </div>
+        </div>
+
+        <div class="forecast-container" id="forecastContainer"></div>
+      </div>
+    </div>
+    <script src="script1.js"></script>
+  </body>
+</html>

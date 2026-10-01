@@ -1,0 +1,185 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #55c3f2, #143275);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: white;
+}
+
+.search-container {
+  display: flex;
+  gap: 10px;
+  width: 420px;
+  margin-bottom: 15px;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  backdrop-filter: blur(10px);
+}
+
+.search-container input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-container button {
+  padding: 12px 20px;
+  background: #ffffff;
+  color: #143275;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.search-container button:hover {
+  background: #e0e0e0;
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  width: 420px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.location {
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.more-options {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.main-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.current-temp-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.main-icon {
+  font-size: 65px;
+}
+
+.temp-number {
+  font-size: 72px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.temp-unit {
+  font-size: 28px;
+  vertical-align: super;
+  position: relative;
+  top: -25px;
+}
+
+.humidity-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.forecast-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.hour-column {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 15px 5px;
+  border-radius: 12px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.hour-time {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.hour-icon {
+  font-size: 22px;
+}
+
+.hour-temp {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.hour-pop {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.footer-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  opacity: 0.8;
+  padding: 20px 0;
+}
+
+.error-msg {
+  color: #ff6b6b;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px 0;
+}
