@@ -7,18 +7,23 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
+  padding: 15px; /* إضافة هامش حماية للشاشات الصغيرة */
+  box-sizing: border-box;
   color: white;
 }
 
 .search-container {
   display: flex;
   gap: 10px;
-  width: 420px;
+  width: 100%;
+  max-width: 420px; /* تغيير width إلى max-width */
   margin-bottom: 15px;
+  box-sizing: border-box;
 }
 
 .search-container input {
   flex: 1;
+  min-width: 0; /* منع خروج الحقل عن حاويته في الهواتف */
   padding: 12px 15px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.1);
@@ -43,6 +48,7 @@ body {
   cursor: pointer;
   font-size: 16px;
   transition: background 0.3s;
+  white-space: nowrap; /* منع انقسام النص داخل الزر */
 }
 
 .search-container button:hover {
@@ -56,7 +62,8 @@ body {
   padding: 30px;
   border-radius: 24px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  width: 420px;
+  width: 100%;
+  max-width: 420px; /* تغيير width إلى max-width */
   box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -86,6 +93,8 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  flex-wrap: wrap; /* للسماح بنزول العناصر إذا ضاقت المساحة */
+  gap: 10px;
 }
 
 .current-temp-container {
@@ -126,6 +135,8 @@ body {
   justify-content: space-between;
   gap: 8px;
   margin-bottom: 25px;
+  overflow-x: auto; /* شريط تمرير أفقي سلس إذا زادت عناصر التوقع في الهواتف الصغيرة */
+  padding-bottom: 5px;
 }
 
 .hour-column {
@@ -134,6 +145,7 @@ body {
   border-radius: 12px;
   text-align: center;
   flex: 1;
+  min-width: 55px; /* ضمان عرض أدنى لعمود التوقعات */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -182,4 +194,23 @@ body {
   text-align: center;
   font-size: 16px;
   padding: 20px 0;
+}
+
+/* تعديلات خاصة بالشاشات الصغرى جداً (الهواتف الصغيرة) */
+@media (max-width: 400px) {
+  .weather-card {
+    padding: 20px;
+  }
+  
+  .temp-number {
+    font-size: 56px;
+  }
+
+  .main-icon {
+    font-size: 50px;
+  }
+
+  .location {
+    font-size: 20px;
+  }
 }
